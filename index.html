@@ -34,7 +34,7 @@
         <a href="#" class="button-right login">Login</a>
         <a href="#" class="button-right register">Register</a>
       </div>
-      <button class="mobile-button"><img src="images/icon-menu.svg" alt="mobile-menu"></button>
+      <button class="mobile-button" onclick="showMobileNav()"><img src="images/icon-menu.svg" alt="mobile-menu" id="mobile-button"></button>
     </nav>
 
     <main>
@@ -71,7 +71,71 @@
 
       <!-- below is the mobile navbar -->
 
-      <div class="mobile-navbar">
+      <div class="mobile-navbar hidden">
+        <div class="nav-group">
+          <nav class="mobile-nav">
+            <ul>
+              <li class="dropdown">
+                <button class="btn-nav" onclick="showListNav()">Features</button>
+                <ul class="list-nav">
+                  <li>
+                    <a href="#">To-do</a>
+                    <img src="images/icon-todo.svg" alt="">
+                  </li>
+                  <li>
+                    <a href="#">Calendar</a>
+                    <img src="images/icon-calendar.svg" alt="">
+                  </li>
+                  <li>
+                    <a href="#">Reminders</a>
+                    <img src="images/icon-reminders.svg" alt="">
+                  </li>
+                  <li>
+                    <a href="#">Planning</a>
+                    <img src="images/icon-planning.svg" alt="">
+                  </li>
+                </ul>
+              </li>
+
+              <li class="dropdown">
+                <button class="btn-nav" onclick="showLoginNav()">Company</button>
+                <ul class="login-nav">
+                  <li>
+                    <a href="#">History</a>
+                  </li>
+                  <li>
+                    <a href="#">Our team</a>
+                  </li>
+                  <li>
+                    <a href="#">Blog</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#">Carrers</a>
+              </li>
+
+              <li>
+                <a href="#">About</a>
+              </li>
+            </ul>
+
+
+
+          </nav>
+
+          <div class="login">
+            <ul>
+              <li>
+                <a href="#">Login</a>
+              </li>
+              <li>
+                <a href="#">Register</a>
+              </li>
+            </ul>
+          </div>
+        </div>
         
       </div>
 

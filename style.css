@@ -76,6 +76,7 @@ body{
 
 .mobile-button{
     display: none;
+    z-index: 10;
 }
 
 .nav-left{
@@ -242,5 +243,58 @@ main{
     .mobile-navbar{
         height: 600px;
         border: 1px solid red;
+
+        position: fixed;
+        right: -100%;
+        top: 0;
+        bottom: 0;
+        z-index: 5;
+        width: 15rem;
+        height: 100vh;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+        opacity: 1;
+
+        background-color: #fff;
+
+        transition: right .5s ease-in-out;
+    }
+
+    .nav-group{
+        position: relative;
+        min-height: 100vh;
+        width: 13.5rem;
+        padding: 5.125rem 2rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .list-nav, .login-nav{
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+    }
+
+    .mobile-nav-show{
+        right: 0;
+        transition: right .5s ease-in-out;
+    }
+
+
+
+    .reveal{
+        z-index: 1;
+        opacity: 1;
+        position: relative;
+        /* transition: opacity 0.15s ease-in-out 0.2s, transform 0.15s ease-in-out 0.1s; */
+    }
+
+    .btn-nav, .btn-login{
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
     }
 }
