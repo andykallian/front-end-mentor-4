@@ -4,10 +4,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-decoration: none;
     list-style: none;
     font-family: 'Epilogue', sans-serif;
     font-size: 18px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
 }
 
 body{
@@ -44,6 +49,8 @@ body{
 
     position: absolute;
 
+    opacity: 1;
+    transition: opacity .5s ease-in
 
 }
 
@@ -70,7 +77,8 @@ body{
 }
 
 .hidden{
-    display: none;
+    opacity: 0;
+    transition: opacity .5s ease-in
 }
 
 
@@ -149,6 +157,7 @@ main{
     margin-top: 30px;
     width: 140px;
     height: 50px;
+    cursor: pointer;
 }
 
 .add{
@@ -241,16 +250,14 @@ main{
     }
 
     .mobile-navbar{
-        height: 600px;
-        border: 1px solid red;
 
         position: fixed;
         right: -100%;
-        top: 0;
+        height: 100%;
         bottom: 0;
+
         z-index: 5;
         width: 15rem;
-        height: 100vh;
         width: -webkit-fit-content;
         width: -moz-fit-content;
         width: fit-content;
@@ -258,7 +265,59 @@ main{
 
         background-color: #fff;
 
-        transition: right .5s ease-in-out;
+        transition: right .7s ease-in-out;
+        box-shadow: -6px 3px 20px -6px rgba(0,0,0,0.92);
+        
+    }
+
+    .list-nav li a, .login-nav li a, .btn-nav, .mobile-nav li a, .login li a{
+        font-size: 22px;
+    }
+
+
+    .mobile-nav > ul, .login > ul{
+        
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 40px;
+
+    }
+
+    .login > ul{
+        align-items: center;
+    }
+
+    .login > ul > li:nth-child(2){
+
+        display: flex;
+
+        border: 1px solid black;
+        padding: 10px;
+        border-radius: 7px;
+        width: 100%;
+        height: 50px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .dropdown{
+        display: flex;
+        flex-direction: column;
+        
+        gap: 10px;
+        
+    }
+
+    .login-nav, .list-nav{
+
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        
     }
 
     .nav-group{
@@ -270,6 +329,7 @@ main{
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+
     }
 
     .list-nav, .login-nav{
@@ -280,7 +340,7 @@ main{
 
     .mobile-nav-show{
         right: 0;
-        transition: right .5s ease-in-out;
+        transition: right .7s ease-in-out;
     }
 
 
@@ -289,7 +349,7 @@ main{
         z-index: 1;
         opacity: 1;
         position: relative;
-        /* transition: opacity 0.15s ease-in-out 0.2s, transform 0.15s ease-in-out 0.1s; */
+        transition: opacity 0.15s ease-in-out 0.2s, transform 0.15s ease-in-out 0.1s;
     }
 
     .btn-nav, .btn-login{
