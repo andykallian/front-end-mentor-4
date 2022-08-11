@@ -10,15 +10,17 @@
     font-size: 18px;
 }
 
-.button-right{
-    color: #000;
-}
-
 body{
    min-width: 100vw;
    max-height: 100vh;
    padding: 20px; 
 }
+
+
+.button-right{
+    color: #000;
+}
+
 
 .nav{
     display: flex;
@@ -27,6 +29,50 @@ body{
     width: 95%;
     margin: auto;
 }
+
+.company, .features{
+    /* display: none; */
+    width: 7.5rem;
+    height: 7rem;
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    box-shadow: 7px 10px 26px -9px #000000;
+
+    position: absolute;
+
+
+}
+
+.features{
+    padding: 8px;
+    left: 150px;
+    top: 50px;
+    z-index: 3;
+}
+
+.features p, .company p{
+    display: flex;
+    justify-content: space-around;
+    font-size: .8rem;
+}
+
+.features img{
+    margin-right: 3px;
+}
+
+.company{
+    left: 280px;
+    top: 53px;
+}
+
+.hidden{
+    display: none;
+}
+
 
 .mobile-button{
     display: none;
@@ -119,7 +165,7 @@ main{
     width: 453px;
 }
 
-@media screen and (max-width: 445px) {
+@media screen and (max-width: 775px) {
 
 
     
@@ -191,5 +237,10 @@ main{
 
     .add img{
         width: 20%;
+    }
+
+    .mobile-navbar{
+        height: 600px;
+        border: 1px solid red;
     }
 }

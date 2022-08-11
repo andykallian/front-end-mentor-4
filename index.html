@@ -16,15 +16,17 @@
   <div class="container">
     <nav class="nav">
       <div class="nav-left">
-
+        
         <img src="images/logo.svg" alt="">
         <ul class="list">
-          <li class="list-item">Features</li>
-          <img src="images/icon-arrow-down.svg" alt="arrow">
-          <li class="list-item">Company</li>
-          <img src="images/icon-arrow-down.svg" alt="arrow">
+
+          <li class="list-item" id="features" onclick="showFeatureBox()" onmouseout="hideFeatureBox()">Features</li>
+          <img src="images/icon-arrow-down.svg" class="arrow-feature" alt="arrow" onclick="showFeatureBox()" onmouseout="hideFeatureBox()">
+          <li class="list-item" id="company" onclick="showCompanyBox()" onmouseout="hideCompanyBox()">Company</li>
+          <img src="images/icon-arrow-down.svg" alt="arrow" onclick="showCompanyBox()" onmouseout="hideCompanyBox()" class="arrow-company">
           <li class="list-item">Careers</li>
           <li class="list-item">About</li>
+
         </ul>
       </div>
 
@@ -51,6 +53,29 @@
           </div>
       </div>
       <img class="hero" src="images/image-hero-desktop.png" alt="hero image">
+
+      <!-- both divs belows are cards that show up when FEATURE and COMPANY are clicke -->
+
+      <div class="features hidden">
+        <p><img src="images/icon-todo.svg" alt="to-do">Todo List</p>
+        <p><img src="images/icon-calendar.svg" alt="calendar">Calendar</p>
+        <p><img src="images/icon-reminders.svg" alt="remiders">Reminders</p>
+        <p><img src="images/icon-planning.svg" alt="planning">Planning</p>
+      </div>
+
+      <div class="company hidden">
+        <p>History</p>
+        <p>Our Team</p>
+        <p>Blog</p>
+      </div>
+
+      <!-- below is the mobile navbar -->
+
+      <div class="mobile-navbar">
+        
+      </div>
+
+
     </main>
   </div>
 
