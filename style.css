@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Epilogue', sans-serif;
+    font-size: 18px;
+}
+
+.button-right{
+    color: #000;
+}
+
+body{
+   min-width: 100vw;
+   max-height: 100vh;
+   padding: 20px; 
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+
+    width: 95%;
+    margin: auto;
+}
+
+.mobile-button{
+    display: none;
+}
+
+.nav-left{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.list{
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+
+.list-item{
+    margin-left: 20px;
+}
+
+.list-item:hover, .list img:hover{
+    cursor: pointer;
+}
+
+.list img{
+    width: 20px;
+    height: 10px;
+}
+
+
+
+
+.nav-right{
+    align-items: center;
+    display: flex;
+    gap: 20px;
+}
+
+.register{
+    padding: 15px;
+    border: 1px solid #000;
+    border-radius: 10px;
+}
+
+main{
+    display: flex;
+    justify-content: space-between;
+    margin-inline: auto;
+    margin-block: 50px;
+    width: 80%;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    width: 50%;
+    margin-top: 64px;
+}
+
+.text h1{
+    font-size: 80px;
+}
+
+.text-button button{
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    border-radius: 15px;
+    margin-top: 30px;
+    width: 140px;
+    height: 50px;
+}
+
+.add{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex-1{
+    flex: 1;
+}
+
+.hero{
+    height: 444px;
+    width: 453px;
+}
+
+@media screen and (max-width: 445px) {
+
+
+    
+
+    .nav{
+        flex-direction: row;
+    }
+
+    main{
+        flex-direction: column;
+    }
+
+    .list{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: fixed;
+        left: -100%;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .nav-right{
+        display: none;
+    }
+
+    .nav-left img{
+        width: 100px;
+    }
+
+    .mobile-button{
+        display: block;
+        background: none;
+        border: none;
+        width: fit-content;
+    }
+
+    .mobile-button img{
+        width: 50px;
+        cursor: pointer;
+    }
+
+
+    main{
+        width: unset;
+    }
+
+    .text{
+        width: unset;
+        position: relative;
+        top: 320px;
+        text-align: center;
+    }
+
+    .text h1{
+        font-size: 33px;
+    }
+
+    .hero{
+        height: 350px;
+        width: 97%;
+        margin: auto;
+        position: relative;
+        bottom: 356px;
+    }
+
+    .add img{
+        width: 20%;
+    }
+}
